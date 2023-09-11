@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Counter(props) {
-  const [nb, setNb] = useState(0);
+  let [nb, setNb] = useState(0);
 
   return (
     <>
