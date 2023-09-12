@@ -1,7 +1,4 @@
-import logo from "./logo.svg";
-import Counter from "./components/Counter";
-import ListGroup from "./components/ListGroup";
-import SimpleFilteredList from "./components/SimpleFilteredList";
+import SimpleRouter from "./SimpleRouter/SimpleRouter";
 //import "./App.css";
 
 function App() {
@@ -10,7 +7,8 @@ function App() {
 
   return (
     <>
-      <SimpleFilteredList />
+      <SimpleRouter />
+      {/* <SimpleFilteredList /> */}
       {/* <ListGroup
         title="My title"
         //listItems={[]}
