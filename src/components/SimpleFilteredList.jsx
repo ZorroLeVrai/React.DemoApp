@@ -1,14 +1,18 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function SimpleFilteredList() {
+  const [myList, setMyList] = useState([]);
   const refInput = useRef();
 
   return (
     <>
       <form
         onSubmit={(e) => {
+          const currentValue = refInput.current.value;
           e.preventDefault();
-          console.log("refInput", refInput.current.value);
+          console.log("refInput", currentValue);
+          setMyList([...myList, currentValue]);
+          refInput.current.value = "";
         }}
       >
         <label htmlFor="listItem">New Item</label>
@@ -17,7 +21,9 @@ export default function SimpleFilteredList() {
       </form>
       <div>My list:</div>
       <ul>
-        <li>Item1</li>
+        {myList.map((it, index) => (
+          <li key={index}>{it}</li>
+        ))}
       </ul>
     </>
   );
