@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import Counter from "./components/Counter";
 import ListGroup from "./components/ListGroup";
-import SimpleFilteredList from "./components/SimpleFileteredList";
+import SimpleFilteredList from "./components/SimpleFilteredList";
 //import "./App.css";
 
 function App() {
