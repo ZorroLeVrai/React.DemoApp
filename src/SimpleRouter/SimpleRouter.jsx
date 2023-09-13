@@ -4,6 +4,7 @@ import Component1 from "./Component1";
 import Component2 from "./Component2";
 import Component3 from "./Component3";
 import "./routerStyle.css";
+import HomeRoute from "./HomeRoute";
 
 export default function SimpleRouter() {
   return (
@@ -21,20 +22,9 @@ export default function SimpleRouter() {
         <span>
           <Link to="/Link3">Link3</Link>
         </span>
-        {/* <ul>
-          <li>
-            <Link to="/Link1">Link1</Link>
-          </li>
-          <li>
-            <Link to="/Link2">Link2</Link>
-          </li>
-          <li>
-            <Link to="/Link3">Link3</Link>
-          </li>
-        </ul> */}
       </nav>
       <Routes>
-        <Route path="/" element={<div>Main Page</div>} />
+        <Route path="/" element={<div>Home Page</div>} />
         <Route path="/Link1" element={<Component1 />} />
         <Route path="/Link2" element={<Component2 />} />
         <Route path="/Link3" element={<Component3 />} />
