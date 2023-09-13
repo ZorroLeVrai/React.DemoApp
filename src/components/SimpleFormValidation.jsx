@@ -1,8 +1,25 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-const SimpleForm = () => {
-  const { register, handleSubmit, reset } = useForm();
+const schema = z.object({
+  firstName: z
+    .string()
+    .min(3, { message: "First Name must be at least 3 characters" }),
+  lastName: z
+    .string()
+    .min(3, { message: "Last Name must be at least 3 characters" }),
+  email: z.string().email(),
+});
+
+const SimpleFormValidation = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isValid },
+  } = useForm({ resolver: zodResolver(schema) });
 
   const onSubmit = (data) => {
     console.log(data);
@@ -22,6 +39,9 @@ const SimpleForm = () => {
             type="text"
             className="form-control"
           />
+          {errors.firstName && (
+            <p className="text-danger">{errors.firstName.message}</p>
+          )}
         </div>
         <div className="mb-3">
           <label htmlFor="lastName" className="form-label">
@@ -33,6 +53,9 @@ const SimpleForm = () => {
             type="text"
             className="form-control"
           />
+          {errors.lastName && (
+            <p className="text-danger">{errors.lastName.message}</p>
+          )}
         </div>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
@@ -44,6 +67,9 @@ const SimpleForm = () => {
             type="text"
             className="form-control"
           />
+          {errors.email && (
+            <p className="text-danger">{errors.email.message}</p>
+          )}
         </div>
         <button className="btn btn-primary" type="submit">
           Submit
@@ -53,4 +79,4 @@ const SimpleForm = () => {
   );
 };
 
-export default SimpleForm;
+export default SimpleFormValidation;

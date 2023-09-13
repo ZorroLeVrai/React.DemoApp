@@ -1,6 +1,7 @@
 import SimpleRouter from "./SimpleRouter/SimpleRouter";
 import MuButton from "./components/MuButton";
 import SimpleForm from "./components/SimpleForm";
+import SimpleFormValidation from "./components/SimpleFormValidation";
 import SeparateLinkRouter from "./SimpleRouter/SeparateLinkRouter";
 //import "./App.css";
 
@@ -11,8 +12,9 @@ function App() {
   return (
     <>
       {/* <MuButton /> */}
-      <SeparateLinkRouter />
-      {/* <SimpleForm /> */}
+      {/* <SeparateLinkRouter /> */}
+      <SimpleForm />
+      {/* <SimpleFormValidation /> */}
       {/* <SimpleFilteredList /> */}
       {/* <ListGroup
         title="My title"
