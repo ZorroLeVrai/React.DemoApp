@@ -4,6 +4,7 @@ import SimpleForm from "./components/SimpleForm";
 import SimpleFormValidation from "./components/SimpleFormValidation";
 import SeparateLinkRouter from "./SimpleRouter/SeparateLinkRouter";
 import TaskList from "./TaskList/TaskList";
+import TaskListWithContext from "./TaskListUsingContext/TaskListWithContext";
 //import "./App.css";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     <>
       {/* <MuButton /> */}
       {/* <SeparateLinkRouter /> */}
-      <TaskList />
+      <TaskListWithContext />
       {/* <SimpleFormValidation /> */}
       {/* <SimpleFilteredList /> */}
       {/* <ListGroup
