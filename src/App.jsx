@@ -3,6 +3,7 @@ import MuButton from "./components/MuButton";
 import SimpleForm from "./components/SimpleForm";
 import SimpleFormValidation from "./components/SimpleFormValidation";
 import SeparateLinkRouter from "./SimpleRouter/SeparateLinkRouter";
+import TaskList from "./TaskList/TaskList";
 //import "./App.css";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <>
       {/* <MuButton /> */}
       {/* <SeparateLinkRouter /> */}
-      <SimpleForm />
+      <TaskList />
       {/* <SimpleFormValidation /> */}
       {/* <SimpleFilteredList /> */}
       {/* <ListGroup
