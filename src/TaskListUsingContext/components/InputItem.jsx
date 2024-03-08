@@ -25,7 +25,7 @@ const InputItem = () => {
     <div>
       <label htmlFor="taskItem">Task name:</label>
       <input
-        id="taskNameInput"
+        id="taskItem"
         type="text"
         name="taskItem"
         value={taskName}

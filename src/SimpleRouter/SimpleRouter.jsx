@@ -11,23 +11,23 @@ export default function SimpleRouter() {
     <>
       <nav>
         <span>
-          <Link to="/">Home</Link>
+          <Link to="/SimpleRouter ">Home</Link>
         </span>
         <span>
-          <Link to="/Link1">Link1</Link>
+          <Link to="/SimpleRouter/Link1">Link1</Link>
         </span>
         <span>
-          <Link to="/Link2">Link2</Link>
+          <Link to="/SimpleRouter/Link2">Link2</Link>
         </span>
         <span>
-          <Link to="/Link3">Link3</Link>
+          <Link to="/SimpleRouter/Link3">Link3</Link>
         </span>
       </nav>
       <Routes>
-        <Route path="/" element={<div>Home Page</div>} />
-        <Route path="/Link1" element={<Component1 />} />
-        <Route path="/Link2" element={<Component2 />} />
-        <Route path="/Link3" element={<Component3 />} />
+        <Route path="/SimpleRouter/" element={<div>Home Page</div>} />
+        <Route path="/SimpleRouter/Link1" element={<Component1 />} />
+        <Route path="/SimpleRouter/Link2" element={<Component2 />} />
+        <Route path="/SimpleRouter/Link3" element={<Component3 />} />
         <Route path="*" element={<div>No Component</div>} />
       </Routes>
     </>
