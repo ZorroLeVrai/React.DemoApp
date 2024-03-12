@@ -43,7 +43,7 @@ const SimpleForm = () => {
             id="email"
             type="text"
             className="form-control"
-            autocomplete="off"
+            autoComplete="off"
           />
         </div>
         <button className="btn btn-primary" type="submit">

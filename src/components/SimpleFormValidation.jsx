@@ -66,7 +66,7 @@ const SimpleFormValidation = () => {
             id="email"
             type="text"
             className="form-control"
-            autocomplete="off"
+            autoComplete="off"
           />
           {errors.email && (
             <p className="text-danger">{errors.email.message}</p>
